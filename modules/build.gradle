@@ -9,8 +9,8 @@ subprojects {
 
     gradle.taskGraph.whenReady { graph ->
         if (project.tasks.findByName('packageRunDeployLiferay') && graph.hasTask(packageRunDeployLiferay)) {
-            packageRunTest.enabled = true
-            packageRunBuild.enabled = false
+            packageRunTest.enabled = false
+            packageRunBuild.enabled = true
         }
     }
 }
